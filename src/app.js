@@ -69,12 +69,18 @@ app.get('/compare', (req, res) => {
   // };
 
   const difference = data.todayRate - data.yesterdayRate;
-  console.log(difference);   
+  // console.log(difference);   
   
   if (difference < 0) {
-    res.send(`The value decreased by ${-1 * difference} USD from yesterday`);
+    res.send(`
+    Yesterday's rate was ${data.yesterdayRate} USD,
+    Today's rate is ${data.todayRate} USD,
+    Bitcoin's value decreased by ${-1 * difference} USD since yesterday`);
   } else {
-    res.send(`The value increased by ${difference} USD from yesterday`);
+    res.send(`
+    Yesterday's rate was ${data.yesterdayRate},
+    Today's rate is ${data.todayRate},
+    Bitcoin's value increased by ${difference} USD since yesterday`);
   }
 });
 

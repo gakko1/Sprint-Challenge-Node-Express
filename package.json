@@ -4,8 +4,16 @@
   "description": "A challenge to asses Node and Express knowledge",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
   },
   "author": "Ivan Mora",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "node": "^9.5.0",
+    "node-fetch": "^2.0.0",
+    "nodemon": "^1.15.0"
+  }
 }
